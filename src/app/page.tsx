@@ -106,7 +106,7 @@ export default function Home() {
         <div className="w-[70vw] rounded-sm outline outline-2 outline-offset-2 outline-muted">
           <AspectRatio ratio={16 / 9}>
             <iframe
-              src="https://player.twitch.tv/?channel=piratesoftware&height=720&width=1280&parent=localhost&autoplay=false&muted=true"
+              src="https://player.twitch.tv/?channel=piratesoftware&height=720&width=1280&parent=localhost&parent=pirate-software.vercel.app&autoplay=false&muted=true"
               className="h-full w-full rounded-sm"
             ></iframe>
           </AspectRatio>
