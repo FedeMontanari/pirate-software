@@ -15,6 +15,10 @@ const navigationItems = [
     href: "/#links",
   },
   {
+    name: "Stream",
+    href: "/#stream",
+  },
+  {
     name: "Donations",
     href: "/#donations",
   },
@@ -22,7 +26,7 @@ const navigationItems = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed flex h-10 min-w-full flex-row items-center justify-between border-b-4 bg-background/90 px-7 py-3 text-lg">
+    <nav className="fixed z-10 flex h-10 min-w-full flex-row items-center justify-between border-b-4 bg-background/90 px-7 py-3 text-lg">
       <Link
         href="/"
         className=" border-white text-2xl transition hover:scale-110 hover:border-b"

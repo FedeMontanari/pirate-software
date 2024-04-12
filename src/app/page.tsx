@@ -10,10 +10,11 @@ import hbLogo from "@/assets/images/heartbound/heartbound_splash.png";
 import ktmLogo from "@/assets/images/kill_the_moon/ktm_splash.png";
 
 import logo from "@/assets/images/pirate_logo.png";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ourGames = [
   {
-    href: "/games/championsofbreakfast",
+    href: "/games/breakfast",
     title: "Champions of Breakfast",
     img: bfastLogo,
   },
@@ -94,6 +95,23 @@ export default function Home() {
         </h4>
         <OurLinksComponent />
       </section>
+      {/* Livestream section */}
+      <section
+        id="stream"
+        className="jutsify-center flex flex-col items-center pt-40"
+      >
+        <h4 className="scroll-m-20 pb-6 text-3xl font-semibold tracking-tight">
+          Watch us live!
+        </h4>
+        <div className="w-[70vw] rounded-sm outline outline-2 outline-offset-2 outline-muted">
+          <AspectRatio ratio={16 / 9}>
+            <iframe
+              src="https://player.twitch.tv/?channel=piratesoftware&height=720&width=1280&parent=localhost&autoplay=false&muted=true"
+              className="h-full w-full rounded-sm"
+            ></iframe>
+          </AspectRatio>
+        </div>
+      </section>
       {/* Donations section */}
       <section
         className="jutsify-center flex w-full flex-col items-center pt-40"
@@ -134,11 +152,9 @@ export default function Home() {
           </Link>
         </Button>
         <span>
-          Donate to our{" "}
+          Donations go to our{" "}
           <Button asChild className="inline p-0" variant="link">
-            <Link href="https://www.twitch.tv/piratesoftware">
-              Twitch channel
-            </Link>
+            <Link href="https://www.twitch.tv/piratesoftware">Twitch</Link>
           </Button>{" "}
           mods.
         </span>
