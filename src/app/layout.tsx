@@ -19,6 +19,12 @@ const pixel = Pixelify_Sans({
 export const metadata: Metadata = {
   title: "Pirate Software",
   description: "We make pretty rad games!",
+  openGraph: {
+    title: "Pirate Software",
+    description: "Pirate Software is a small team producing Indie Games!",
+    url: "https://pirate-software.vercel.app",
+    siteName: "Pirate Software",
+  },
 };
 
 export default function RootLayout({
