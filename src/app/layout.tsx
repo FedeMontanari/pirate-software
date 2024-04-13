@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     description: "Pirate Software is a small team producing Indie Games!",
     url: "https://pirate-software.vercel.app",
     siteName: "Pirate Software",
-    images: ["https://pirate-software.vercel.app/opengraph-image.gif"],
+    images: ["https://pirate-software.vercel.app/public/og-image.gif"],
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Pirate Software",
-    description: "Pirate Software is a small team producing Indie Games!",
+    description: "We make pretty rad games!",
     site: "@PirateSoftware",
-    images: ["https://pirate-software.vercel.app/opengraph-image.gif"],
+    images: ["https://pirate-software.vercel.app/public/twitter-image.png"],
   },
 };
 
