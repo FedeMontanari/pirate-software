@@ -34,12 +34,12 @@ export default function RootLayout({
           pixel.className,
         ])}`}
       >
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
         >
-          <Analytics />
           <Navbar />
           <main className="pt-4">{children}</main>
         </ThemeProvider>
