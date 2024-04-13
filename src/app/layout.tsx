@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Pirate Software is a small team producing Indie Games!",
     url: "https://pirate-software.vercel.app",
     siteName: "Pirate Software",
-    images: ["https://pirate-software.vercel.app/public/og-image.gif"],
+    images: ["https://pirate-software.vercel.app/opengraph-image.gif"],
     type: "website",
     locale: "en_US",
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Pirate Software",
     description: "We make pretty rad games!",
     site: "@PirateSoftware",
-    images: ["https://pirate-software.vercel.app/public/twitter-image.png"],
+    images: ["https://pirate-software.vercel.app/twitter-image.png"],
   },
 };
 
