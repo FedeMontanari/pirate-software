@@ -17,23 +17,13 @@ const pixel = Pixelify_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Pirate Software",
-  description: "Pirate Software is a small team producing Indie Games!",
-  openGraph: {
-    title: "Pirate Software",
-    description: "Pirate Software is a small team producing Indie Games!",
-    url: "https://pirate-software.vercel.app",
-    siteName: "Pirate Software",
-    images: ["https://pirate-software.vercel.app/opengraph-image.gif"],
-    type: "website",
-    locale: "en_US",
+  title: {
+    default: "Pirate Software",
+    template: "%s - Pirate Software",
   },
+  description: "Pirate Software is a small team producing Indie Games!",
   twitter: {
     card: "summary_large_image",
-    title: "Pirate Software",
-    description: "We make pretty rad games!",
-    site: "@PirateSoftware",
-    images: ["https://pirate-software.vercel.app/twitter-image.png"],
   },
 };
 

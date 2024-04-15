@@ -11,6 +11,10 @@ const links = [
     href: "https://www.humblebundle.com/?partner=piratesoftware",
   },
   {
+    siName: "siItchdotio",
+    href: "https://piratesoftware.itch.io/",
+  },
+  {
     siName: "siTwitter",
     href: "https://twitter.com/PirateSoftware",
   },
@@ -53,7 +57,7 @@ export default function OurLinksComponent() {
           <Link
             href={ic.href}
             key={i}
-            className="flex flex-col items-center justify-center rounded bg-slate-500 px-5 pb-2 pt-4 transition duration-75 hover:scale-105 hover:bg-slate-700"
+            className="flex flex-col items-center justify-center rounded px-5 pb-2 pt-4 transition duration-75 hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -67,12 +71,12 @@ export default function OurLinksComponent() {
                 color: `#${iconData.hex}`,
               }}
               xmlns="http://www.w3.org/2000/svg"
-              className="rounded-2xl bg-white/70 p-1"
+              className="rounded-md bg-white p-1"
             >
               <title>{iconData.title}</title>
               <path d={iconData.path}></path>
             </svg>
-            <span className="text-background">
+            <span className="">
               {iconData.title == "Big Cartel" ? "Merch" : `${iconData.title}`}
             </span>
           </Link>

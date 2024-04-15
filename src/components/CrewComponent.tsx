@@ -47,12 +47,8 @@ export default function CrewComponent() {
     <div className="flex w-11/12 flex-col items-start space-y-5">
       {crew.map((cr, i) => (
         <div key={i} className="w-11/12 border-b last:border-none">
-          <h5 className="w-fit border-b text-2xl">
-            {cr.header}
-            {cr.title && (
-              <span className="ml-3 inline text-lg">{cr.title}</span>
-            )}
-          </h5>
+          <h5 className="w-fit border-b text-2xl">{cr.header}</h5>
+          {cr.title && <span className="ml-5 block">- {cr.title}</span>}
           <div className="p-8 text-center">
             {cr.p.map((p, i) => (
               <p className="text-lg" key={i}>

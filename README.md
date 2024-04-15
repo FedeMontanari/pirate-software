@@ -4,3 +4,13 @@
 
 Small mockup for a game developing company.
 Fan-made
+
+### To-do
+[ ] Make Heartbound page
+[x] Make Kill the Moon page
+[ ] Add develop.games link
+[ ] Fix metrics (uBlock)
+[ ] Responsive nabvar
+[ ] Fix steam store widget background
+[ ] Finish metadata/SEO (sitemap, robots, manifest)
+[ ] Dynamic metadata for subpages
