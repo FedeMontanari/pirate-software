@@ -17,14 +17,12 @@ const pixel = Pixelify_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pirate-software.vercel.app"),
   title: {
     default: "Pirate Software",
     template: "%s - Pirate Software",
   },
   description: "Pirate Software is a small team producing Indie Games!",
-  twitter: {
-    card: "summary_large_image",
-  },
 };
 
 export default function RootLayout({
