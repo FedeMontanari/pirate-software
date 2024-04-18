@@ -50,7 +50,7 @@ const links = [
 
 export default function OurLinksComponent() {
   return (
-    <div className="flex w-3/4 flex-row flex-wrap items-center justify-center gap-3">
+    <div className="grid w-3/4 grid-cols-2 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-3">
       {links.map((ic, i) => {
         const iconData = simpleIconsPath(ic.siName);
         return (

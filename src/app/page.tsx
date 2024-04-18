@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <section className="mb-20 flex flex-col items-center justify-center">
       <Image
-        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-80"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-70"
         src={logo}
         alt="Pirate Software Logo"
       />
@@ -52,7 +52,7 @@ export default function Home() {
         <h4 className="scroll-m-20 pb-6 text-3xl font-semibold tracking-tight">
           Our games
         </h4>
-        <div className="flex flex-row items-center justify-center gap-4 px-8">
+        <div className="flex flex-col items-center justify-center gap-4 px-8 md:flex-row">
           {ourGames.map((it, i) => (
             <Link
               href={it.href}
@@ -60,14 +60,14 @@ export default function Home() {
               key={i}
             >
               <Card className="h-fit">
-                <CardHeader className="py-3">
+                {/* <CardHeader className="py-3">
                   <CardTitle className="text-center">{it.title}</CardTitle>
-                </CardHeader>
+                </CardHeader> */}
                 <CardContent className="rounded-b p-0">
                   <Image
                     src={it.img}
                     alt="Game splash art"
-                    className="w-96 rounded-b"
+                    className="w-96 rounded"
                   />
                 </CardContent>
               </Card>
