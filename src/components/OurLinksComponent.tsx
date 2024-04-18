@@ -76,7 +76,7 @@ export default function OurLinksComponent() {
               <title>{iconData.title}</title>
               <path d={iconData.path}></path>
             </svg>
-            <span className="">
+            <span className="text-center leading-tight">
               {iconData.title == "Big Cartel" ? "Merch" : `${iconData.title}`}
             </span>
           </Link>

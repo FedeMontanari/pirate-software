@@ -194,15 +194,13 @@ export default function COBComponent() {
         <h4 className="scroll-m-20 pb-6 text-2xl font-semibold tracking-tight">
           Purchase on Steam!
         </h4>
-        <div className="h-fit w-fit rounded-md border-4 border-muted p-2">
-          <iframe
-            src="https://store.steampowered.com/widget/454380/"
-            frameBorder={0}
-            width="646"
-            height="190"
-            className="rounded-md"
-          ></iframe>
-        </div>
+        <iframe
+          src="https://store.steampowered.com/widget/454380/"
+          frameBorder={0}
+          width="646"
+          height="190"
+          className="w-full rounded-md md:w-[646px]"
+        ></iframe>
       </div>
     </div>
   );

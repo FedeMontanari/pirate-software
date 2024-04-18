@@ -81,6 +81,7 @@ export default function Navbar() {
             <Link
               href="/"
               className="border-white text-3xl transition hover:scale-110 hover:border-b"
+              onClick={() => setOpen(false)}
             >
               Home
             </Link>
@@ -88,7 +89,11 @@ export default function Navbar() {
           </li>
           {navigationItems.map((el, i) => (
             <li key={i} className="text-2xl transition hover:scale-110">
-              <Link href={el.href} className="border-white hover:border-b">
+              <Link
+                href={el.href}
+                className="border-white hover:border-b"
+                onClick={() => setOpen(false)}
+              >
                 {el.name}
               </Link>
             </li>
