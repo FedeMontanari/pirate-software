@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 import Navbar from "@/components/Navbar";
+import CustomAnalytics from "@/util/CustomAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 const pixel = Pixelify_Sans({
@@ -38,6 +39,7 @@ export default function RootLayout({
           pixel.className,
         ])}`}
       >
+        <CustomAnalytics />
         <Analytics />
         <ThemeProvider
           attribute="class"
