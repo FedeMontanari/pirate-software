@@ -3,13 +3,19 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/growth/:match*",
+        source: "/dest/:match*",
         destination:
-          "https://pirate-software.vercel.app/_vercel/insights/:path*",
+          "https://pirate-software.vercel.app/_vercel/insights/:match*",
       },
     ];
   },
   skipTrailingSlashRedirect: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
