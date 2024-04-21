@@ -3,7 +3,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/dest/:match*",
+        source: "/growth/:match*",
         destination:
           "https://pirate-software.vercel.app/_vercel/insights/:match*",
       },
