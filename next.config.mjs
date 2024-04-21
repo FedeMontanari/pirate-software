@@ -3,9 +3,9 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/insights/:match*",
+        source: "/ingest/:path*",
         destination:
-          "https://pirate-software.vercel.app/_vercel/insights/:match*",
+          "https://pirate-software.vercel.app/_vercel/insights/:path*",
       },
     ];
   },
