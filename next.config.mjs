@@ -3,9 +3,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/growth/:match*",
-        destination:
-          "https://pirate-software.vercel.app/_vercel/insights/:match*",
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
       },
     ];
   },

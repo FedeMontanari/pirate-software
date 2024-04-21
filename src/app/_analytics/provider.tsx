@@ -1,29 +1,18 @@
 "use client";
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
 
-import Script from "next/script";
+if (typeof window !== "undefined") {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+    api_host: "/ingest",
+    ui_host: "https://app.posthog.com",
+  });
+}
 
-export default function AnalyticsRewrite() {
-  const isDev = process.env.NEXT_PUBLIC_VERCEL_ENV === "development";
-
-  const beforeSend = (event: string) => {
-    console.log("add custom beforeSend logic here");
-    return event;
-  };
-
-  const src = isDev
-    ? "https://va.vercel-scripts.com/v1/script.debug.js"
-    : "/growth/script.js";
-
-  if (typeof window !== "undefined") {
-    window.va?.("beforeSend", beforeSend);
-  }
-
-  return (
-    <>
-      <Script id="meow" strategy="afterInteractive">
-        {`window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`}
-      </Script>
-      <Script src={src} data-endpoint="/growth" strategy="lazyOnload" async />
-    </>
-  );
+export default function PHProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
 }

@@ -1,11 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import { Inter, Pixelify_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 
 import Navbar from "@/components/Navbar";
+import PHProvider from "./_analytics/provider";
+import PostHogPageView from "./_analytics/PostHogPageView";
 
 const inter = Inter({ subsets: ["latin"] });
 const pixel = Pixelify_Sans({
@@ -38,22 +39,23 @@ export default function RootLayout({
           content="cRDH63fLEmFOQnh-eioPw60XdEiXL6drJvvZ9XYznEU"
         />
       </head>
-      <body
-        className={`${cn("font-pixel min-h-screen bg-background antialiased", [
-          inter.className,
-          pixel.className,
-        ])}`}
-      >
-        <Analytics />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
+      <PHProvider>
+        <body
+          className={`${cn(
+            "font-pixel min-h-screen bg-background antialiased",
+            [inter.className, pixel.className],
+          )}`}
         >
-          <Navbar />
-          <main className="pt-4">{children}</main>
-        </ThemeProvider>
-      </body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+          >
+            <Navbar />
+            <main className="pt-4">{children}</main>
+          </ThemeProvider>
+        </body>
+      </PHProvider>
     </html>
   );
 }
