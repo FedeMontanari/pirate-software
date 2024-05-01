@@ -9,8 +9,8 @@ Fan-made
 [ ] Make Heartbound page
 [x] Make Kill the Moon page
 [ ] Add develop.games link
-[ ] Fix metrics (uBlock)
-[ ] Responsive nabvar
+[x] Fix metrics (uBlock)
+[x] Responsive nabvar
 [ ] Fix steam store widget background
-[ ] Finish metadata/SEO (sitemap, robots, manifest)
+[x] Finish metadata/SEO (sitemap, robots, manifest)
 [ ] Dynamic metadata for subpages
